@@ -1,0 +1,7 @@
+﻿文件下载网址  =>  文件保存路径
+http://www.metinfo.cn/demo/met088/321/public/ui/met/images/page/page6.jpg  =>  F:\仿站小工具 V3.0\www.metinfo.cn\images\page6.jpg
+http://www.metinfo.cn/demo/met088/321/public/js/jQuery1.7.2.js  =>  F:\仿站小工具 V3.0\www.metinfo.cn\js\jquery1.7.2.js
+http://www.metinfo.cn/demo/met088/321/templates/met088/images/js/DD_belatedPNG_0.0.8a.js  =>  F:\仿站小工具 V3.0\www.metinfo.cn\js\dd_belatedpng_0.0.8a.js
+http://www.metinfo.cn/demo/met088/321/templates/met088/images/dt-0.gif  =>  F:\仿站小工具 V3.0\www.metinfo.cn\images\dt-0_1.gif
+http://www.metinfo.cn/demo/met088/321/upload/201306/thumb/1370673870.jpg  =>  F:\仿站小工具 V3.0\www.metinfo.cn\picture\1370673870.jpg
+http://www.metinfo.cn/demo/met088/321/upload/201306/1370659528.jpg  =>  F:\仿站小工具 V3.0\www.metinfo.cn\picture\1370659528.jpg
