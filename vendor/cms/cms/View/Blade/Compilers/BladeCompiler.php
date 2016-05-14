@@ -122,7 +122,7 @@ class BladeCompiler extends Compiler implements CompilerInterface
     }
 
     /**
-     * Set the path currently being compiled.
+    * Set the path currently being compiled.
      *
      * @param  string  $path
      * @return void
@@ -602,6 +602,7 @@ class BladeCompiler extends Compiler implements CompilerInterface
     }
 
     /**
+<<<<<<< HEAD
      * Execute the user defined extensions.
      *
      * @param  string  $value
@@ -617,6 +618,8 @@ class BladeCompiler extends Compiler implements CompilerInterface
     }
 
     /**
+=======
+>>>>>>> 837dd5fbbf5167d910f4287c8675d297866fd576
      * Compile the extends statements into valid PHP.
      *
      * @param  string  $expression
@@ -627,7 +630,12 @@ class BladeCompiler extends Compiler implements CompilerInterface
         if (strpos($expression, '(') === 0) {
             $expression = substr($expression, 1, -1);
         }
+<<<<<<< HEAD
         $data = "<?php \$arr=get_defined_vars();forget(\$arr, array('__data', '__path')); echo \$__env->make($expression, \$arr)->render(); ?>";
+=======
+
+        $data = "<?php echo \$__env->make($expression, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>";
+>>>>>>> 837dd5fbbf5167d910f4287c8675d297866fd576
 
         $this->footer[] = $data;
 
@@ -645,7 +653,12 @@ class BladeCompiler extends Compiler implements CompilerInterface
         if (strpos($expression, '(') === 0) {
             $expression = substr($expression, 1, -1);
         }
+<<<<<<< HEAD
         return "<?php \$arr=get_defined_vars();forget(\$arr, array('__data', '__path')); echo \$__env->make($expression, \$arr)->render(); ?>";
+=======
+
+        return "<?php echo \$__env->make($expression, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>";
+>>>>>>> 837dd5fbbf5167d910f4287c8675d297866fd576
     }
 
     /**

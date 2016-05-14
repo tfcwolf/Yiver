@@ -24,6 +24,7 @@
  			$middleware->handle();
  		}
  	}
+
  	public  function setBaseUrl($host)
  	{
  		$this->baseUrl = $host;
@@ -64,7 +65,6 @@
  		$route = $this->make('route');
  		$route->load("route.php");
  		$routeinfo = $route->Dispatch($request);
-
  		if($routeinfo){
  			$dispatchinfo = $this->DispatchController($routeinfo);
  		} else {

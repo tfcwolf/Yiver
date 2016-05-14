@@ -10,7 +10,7 @@
 
  	public function __construct()
  	{
- 		parent::__construct();
+ 		parent::__construct();837dd5fbbf5167d910f4287c8675d297866fd576
  	}
 
  	public function registerAlias()
