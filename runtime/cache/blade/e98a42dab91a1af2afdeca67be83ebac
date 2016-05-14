@@ -1,0 +1,483 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="renderer" content="webkit">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">var met_wap_tpa=1,met_wap_tpb=1,met_wap_url='http://m.tmp.metinfo.cn/met088/321/',mobile_lang='cn',mobile_prefix='http://m.tmp.metinfo.cn/met088/321/index.php?lang=cn';</script>
+<script src="<?php echo $app->baseUrl; ?>assets/js/mobile.js" type="text/javascript"></script>
+<title>纯水净水器公司网站模板|家用净水器公司网站模板|中央净水器公司网站模板|纯水器公司网站模板|品牌净水器公司网站模板-家用净水器</title>
+<meta name="description" content="纯水净水器公司网站模板|家用净水器公司网站模板|中央净水器公司网站模板|纯水器公司网站模板|品牌净水器公司网站模板" />
+<meta name="keywords" content="纯水净水器公司网站模板|家用净水器公司网站模板|中央净水器公司网站模板|纯水器公司网站模板|品牌净水器公司网站模板" />
+<link rel="stylesheet" type="text/css" href="<?php echo $app->baseUrl; ?>assets/css/metinfo_ui.css" id="metuimodule" data-module ="10001" />
+<link rel="stylesheet" type="text/css" href="<?php echo $app->baseUrl; ?>assets/css/metinfo.css" />
+<script src="<?php echo $app->baseUrl; ?>assets/js/jquery1.7.2.js" type="text/javascript"></script>
+<script src="<?php echo $app->baseUrl; ?>assets/js/metinfo_ui.js" type="text/javascript"></script>
+<!--[if IE]>
+<script src="js/html5.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+
+
+<script type="text/javascript" src="<?php echo $app->baseUrl; ?>assetsjs/banner.js"></script>
+<script type="text/javascript" src="<?php echo $app->baseUrl; ?>assetsjs/dd_belatedpng_0.0.8a.js"></script>
+<!--[if lte IE 6]>
+<script src="js/dd_belatedpng_0.0.8a.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('#banner #ifocus_btn .current, .nTab .TabTitle, .right2, a.more, nav li.line, .index-product .next, .index-product .prev,.sb_nav h3.title');
+    </script>
+<![endif]-->
+<body>
+<header>
+		<div class="inner">
+				<div class="top-logo"> <a href="" title="家用净水器" id="web_logo"> <img src="<?php echo $app->baseUrl; ?>/assets/picture/1370654326.png" alt="家用净水器" title="家用净水器" style="margin:20px 0px 0px 0px;" /> </a>
+						<div class="top-nav list-none">
+						<li class="t"><a href='#' onclick='SetHome(this,window.location,"非IE浏览器不支持此功能，请手动设置！");' style='cursor:pointer;' title='设为首页'  >设为首页</a><span>|</span><a href='#' onclick='addFavorite("非IE浏览器不支持此功能，请手动设置！");' style='cursor:pointer;' title='收藏本站'  >收藏本站</a><span>|</span><a href='http://m.tmp.metinfo.cn/met088/321/' title='手机版'>手机版</a></li>
+								<div id="productsearch"> <span><i style="float:left;"></i></span><span><form method="POST" name="myform1" action="http://tmp.metinfo.cn/met088/321/search/search.php?lang=cn"  target="_self"><input type="hidden" name="lang" value='cn'/>&nbsp;<input type="hidden" name="searchtype" value='0'/>&nbsp;<span class='navsearch_input'><input type="text" name="searchword" size='20'/></span>&nbsp;<input class='searchimage' type='image' src='templates/met088/images/sousuo.gif' /></form></span> </div>
+								<li class="b"><span style="color: rgb(0, 0, 128);"><strong><span style="font-size:12px;">加盟热线</span>：0731-834849591</strong></span></li>
+						</div>
+				</div>
+		</div>
+</header>
+<div class="tpri">
+
+		<nav >
+				<div class="inner">
+						<ul class="list-none">
+
+								<li style='width:140px;'><a href="" title="首页" class="nav"><span>首页</span></a></li>
+
+								<li class="line"></li>
+								<li class="menu01" style='width:139px;'> <a href="company/" title="关于我们"  class="hover-none nav" id="nav_1" ><span>关于我们</span></a>							
+
+										<dl style="display:none;">
+												<dd>
+
+														<a href="company/company6.html" title="公司简介" 0><span>公司简介</span></a>
+
+														<a href="company/company7.html" title="企业历程" ><span>企业历程</span></a>
+
+														<a href="company/company8.html" title="联系我们" 0><span>联系我们</span></a>
+
+												</dd>
+										</dl>
+
+</li>
+
+
+								<li class="line"></li>
+								<li class="menu01" style='width:139px;'> <a href="product/" title="产品中心" 0 class="hover-none nav" id="nav_2" ><span>产品中心</span></a>							
+
+										<dl style="display:none;">
+												<dd>
+
+														<a href="product/product_9_1.html" title="厨饮净水机" ><span>厨饮净水机</span></a>
+
+														<a href="product/product_10_1.html" title="中央净水机" ><span>中央净水机</span></a>
+
+														<a href="product/product_11_1.html" title="温泉净水机" ><span>温泉净水机</span></a>
+
+														<a href="product/product_12_1.html" title="节能饮水台" ><span>节能饮水台</span></a>
+
+														<a href="product/product_13_1.html" title="中央超滤机" ><span>中央超滤机</span></a>
+
+														<a href="product/product_14_1.html" title="空气净化器" ><span>空气净化器</span></a>
+
+														<a href="contact/" title="联系我们" 0><span>联系我们</span></a>
+
+												</dd>
+										</dl>
+
+</li>
+
+
+								<li class="line"></li>
+								<li class="menu01" style='width:139px;'> <a href="Merchants/" title="招商加盟"  class="hover-none nav" id="nav_3" ><span>招商加盟</span></a>							
+
+										<dl style="display:none;">
+												<dd>
+
+														<a href="Merchants/Merchants15.html" title="加盟条件" ><span>加盟条件</span></a>
+
+														<a href="feedbaek/" title="在线加盟" 0><span>在线加盟</span></a>
+
+														<a href="Merchants/Merchants17.html" title="销售网络" ><span>销售网络</span></a>
+
+														<a href="Merchants/Merchants23.html" title="联系我们" ><span>联系我们</span></a>
+
+												</dd>
+										</dl>
+
+</li>
+
+
+								<li class="line"></li>
+								<li class="menu01" style='width:139px;'> <a href="news/" title="公司动态"  class="hover-none nav" id="nav_4" ><span>公司动态</span></a>							
+
+										<dl style="display:none;">
+												<dd>
+
+														<a href="news/news_18_1.html" title="公司新闻" 0><span>公司新闻</span></a>
+
+														<a href="news/news_27_1.html" title="行业资讯" 0><span>行业资讯</span></a>
+
+														<a href="job/" title="人才招聘" 0><span>人才招聘</span></a>
+
+														<a href="contacts/" title="联系我们" ><span>联系我们</span></a>
+
+												</dd>
+										</dl>
+
+</li>
+
+
+								<li class="line"></li>
+								<li class="menu01" style='width:139px;'> <a href="Technology/" title="技术支持"  class="hover-none nav" id="nav_5" ><span>技术支持</span></a>							
+
+										<dl style="display:none;">
+												<dd>
+
+														<a href="Technology/Technology20.html" title="使用说明" ><span>使用说明</span></a>
+
+														<a href="Solve/" title="解决方案" 0><span>解决方案</span></a>
+
+														<a href="Technology/Technology25.html" title="联系我们" ><span>联系我们</span></a>
+
+												</dd>
+										</dl>
+
+</li>
+
+
+								<li class="line"></li>
+								<li class="menu01" style='width:139px;'> <a href="company/company8.html" title="联系我们" 0 class="hover-none nav" id="nav_8" ><span>联系我们</span></a>							
+
+</li>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+if(1==2){
+	$("nav li[class!='line']").hover(
+	   function(){			   
+	       $(this).find('dl').hide();
+	   }
+	);
+}});
+</script>
+						</ul>
+				</div>
+		</nav>
+</div>
+
+
+<div class="bannner" style="height:465px">
+		<div class="indimg">
+				<div class="banner">
+						<div id="banner">
+								<div id="ifocus"style="width:1440px;">
+										<div id="ifocus_pic"  style="width:1440px; height:465px">
+												<div style=" left: 0px" id="ifocus_piclist">
+														<ul style="left: -1440px; width: 7200px;">
+
+																<li><a href='' title='' target='_blank'> <img src="<?php echo $app->baseUrl; ?>/assets/picture/1372212366.png" alt="" width='1440' height='465'> </a></li>
+
+																<li><a href='' title='' target='_blank'> <img src="<?php echo $app->baseUrl; ?>/assets/picture/1370657827.jpg" alt="" width='1440' height='465'> </a></li>
+
+																<li><a href='' title='' target='_blank'> <img src="<?php echo $app->baseUrl; ?>/assets/picture/1372213155.jpg" alt="" width='1440' height='465'> </a></li>
+
+																<li><a href='' title='' target='_blank'> <img src="<?php echo $app->baseUrl; ?>/assets/picture/1370659528.jpg" alt="" width='1440' height='465'> </a></li>
+
+														</ul>
+												</div>
+												<div id="ifocus_btn">
+														<ul>
+														
+													
+																<li class="">&nbsp;</li>
+														
+													
+																<li class="">&nbsp;</li>
+														
+													
+																<li class="">&nbsp;</li>
+														
+													
+																<li class="">&nbsp;</li>
+																
+														
+																
+														</ul>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</div>
+
+</div>
+
+
+
+<div class="inner">
+		<div class="index">
+			
+				<div class="nTab n">
+						<div class="TabTitle">
+								<ul id="myTab0">
+										<li class="active" onmouseover="nTabs(this,0);"><a href="news/news_18_1.html">公司新闻</a></li>
+										<li class="normal" onmouseover="nTabs(this,1);"><a href="news/news_27_1.html">行业资讯</a></li>
+										<li class="normal" onmouseover="nTabs(this,2);"><a href="job/">人才招聘</a></li>
+								</ul>
+						</div>
+						<div class="TabContent">
+								<div id="myTab0_Content0">
+								<table><tr>
+										<td class="img"><a href="news/news_18_1.html" ><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370663572.jpg" alt="公司新闻" title="公司新闻"/></a></td>
+										<td class="img_right">
+												<div id="rn_tx">送礼送健康、净水器设备送礼首选!传统佳节，不少消费者开始提前预备礼品馈赠亲朋好友，送礼就送净水器。</div>
+										</td>
+								</tr></table>		
+<ol class="list-none metlist">
+		
+
+<li>
+			    <a href="news/news20.html" target='_self' title="净水器设备强势入驻龙岗水岸新都小区"><span class="ac">净水器设备强势入驻龙岗水岸新都小区</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="news/news18.html" target='_self' title="热烈庆祝广西贵港净水器设备专卖店开业"><span class="ac">热烈庆祝广西贵港净水器设备专卖店开业</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="news/news16.html" target='_self' title="净水器设备-巴中净水器经销商大会圆满结束"><span class="ac">净水器设备-巴中净水器经销商大会圆满结束</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="news/news15.html" target='_self' title="送礼送健康、净水器设备送礼首选"><span class="ac">送礼送健康、净水器设备送礼首选</span></a></li>
+		
+	
+	
+</ol>
+										</div>
+										
+								<div id="myTab0_Content1" class="none" >
+										<div class="img"><a href="news/news_27_1.html" ><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370664169.gif" alt="行业资讯" title="行业资讯"/></a></div>
+										<div class="img_right">
+												<div id="rn_tx">水，是生命之源，节约用水，人人有责。从现在做起，节约每一滴水，不要让人的眼泪成为世界上的最后一滴水!</div>
+										</div>
+<ol class="list-none metlist">
+		
+
+<li>
+			    <a href="news/news14.html" target='_self' title="净水器设备成为时尚品质生活的必需品"><span class="ac">净水器设备成为时尚品质生活的必需品</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="news/news13.html" target='_self' title="净水器招商加盟如何选好生产厂家"><span class="ac">净水器招商加盟如何选好生产厂家</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="news/news12.html" target='_self' title="净水器设备强势入驻龙岗水岸新都小区"><span class="ac">净水器设备强势入驻龙岗水岸新都小区</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="news/news10.html" target='_self' title="净水器设备解读健康饮水七大标准"><span class="ac">净水器设备解读健康饮水七大标准</span></a></li>
+		
+	
+	
+</ol>										
+									</div>
+								
+								<div id="myTab0_Content2"class="none">
+										<div class="img"><a href="job/" ><img src="<?php echo $app->baseUrl; ?>/assets/picture/1372052333.jpg" alt="人才招聘" title="人才招聘"/></a></div>
+										<div class="img_right">
+												<div id="rn_tx">1、开拓新市场,发展新客户,增加产品销售范围
+2、负责销售区域内销售活动的策划和执行，能按时按量的完成销售任务
+3、管理维护客户关系和客户保持长期的合作。</div>
+										</div>
+<ol class="list-none metlist">
+		
+
+<li>
+			    <a href="job/job1.html" target='_self' title="商业销售精英"><span class="ac">商业销售精英</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="job/job2.html" target='_self' title="总办公室经理助理"><span class="ac">总办公室经理助理</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="job/job3.html" target='_self' title="行政助理"><span class="ac">行政助理</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="job/job4.html" target='_self' title="会计出纳"><span class="ac">会计出纳</span></a></li>
+		
+	
+	
+</ol>
+										</div>
+						</div><div style="height:1px; margin-top:-1px;clear: both;overflow:hidden;"></div>
+				</div>
+	
+	
+				<div class="nTab0 n ">
+						<div class="right2"><a href="company/company6.html"title="公司简介" class="more fr"></a>
+								<h3 class="fl">公司简介</h3>
+								<p class="fl"><b>company profile</b></p>
+						</div>
+						<div class="TabContent">
+								<div id="myTab0_Content0"><div class="editor"> <div style="margin-bottom: 10px; font-family: 宋体b8b体, arial; color: rgb(105,105,105); margin-top: 10px">
+	<img alt="图片关键词" src="<?php echo $app->baseUrl; ?>/assets/picture/20130608_133832.jpg" style="border-left-width: 0px; height: 100px; border-right-width: 0px; border-bottom-width: 0px; float: left; margin: 4px 8px; border-top-width: 0px; width: 125px" />&nbsp;<span style="-webkit-text-size-adjust: none">净水器设备，作为生活饮用水终端净水设备的研发、制造、销售于 一体的水处理高科技企业，是中国最具创新力、最大的水处理设备制造商之一、中国水处理行业最具国际竞争力的企业之一，公司精于过滤材料、工艺的研发、优化组合，生产的家用、商用净水机，采用21世纪最尖端的超滤和反渗透技术，能全方位解决家庭,净水器设备以改善水质..</span></div>
+</div></div>
+						</div>
+				</div>
+				
+	
+				<div class="nTab1 n " >
+						<div class="right2"> <a href="Solve/"title="解决方案" class="more fr"></a>
+								<h3 class="fl">解决方案</h3>
+								<p class="fl"><b>solution</b></p>
+						</div>
+						<div class="TabContent">
+								<div id="myTab0_Content0">
+								<table><tr>
+										<td class="img"><a href="Solve/" ><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370663412.jpg" alt="解决方案"/></a></td>
+										<td class="img_right">
+												<div id="rn_tx">净水器设备净水器安装复杂吗？净水器设备公司在全国范围实行送货上门，免费安装。精心的设计不影响家居美观。</div>
+										</td>
+										</tr></table>
+<ol class="list-none metlist">
+		
+
+<li>
+			    <a href="Solve/Solve1.html" target='_self' title="净水器设备与其它净水机（器）有何区别？"><span class="ac">净水器设备与其它净水机（器）有何区别？</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="Solve/Solve4.html" target='_self' title="净水器设备的出水水质可靠吗？卫生部门有无检测？  "><span class="ac">净水器设备的出水水质可靠吗？卫生部门有无检测？  </span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="Solve/Solve3.html" target='_self' title="水太纯净，里面的矿物质都去掉了对身体是否有害？"><span class="ac">水太纯净，里面的矿物质都去掉了对身体是否有害？</span></a></li>
+		
+	
+		
+
+<li>
+			    <a href="Solve/Solve5.html" target='_self' title="净水器设备净水器安装复杂吗？影不影响家居美观？"><span class="ac">净水器设备净水器安装复杂吗？影不影响家居美观？</span></a></li>
+		
+	
+	
+</ol>										
+										</div>
+						</div>
+				</div>
+	
+				<div class="clear"></div>
+		</div>
+</div>
+</div>
+</div>
+
+
+<footer>
+	
+<div class="xiabgtop"></div>
+<div class="renzheng">
+		<div class="bound">
+				<div class="index-product">
+				<div>
+					<p id="trigger"></p>
+					<a class="prev" id="car_prev" href="javascript:void(0);"></a> <a class="next" id="car_next" href="javascript:void(0);"></a> </div>
+				<div class="clear">
+					<div class="profld" id="indexcar" data-listnum="4">
+<ol class="list-none metlist">					
+
+           <li class="pager" style="list-style: none;"><a href="product/product7.html"  title="QN-SPA温泉机"><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370673870.jpg" alt="QN-SPA温泉机" title="QN-SPA温泉机" style="width:200px; height:150px;" /></a>
+			   
+		   </li>
+
+           <li class="pager" style="list-style: none;"><a href="product/product6.html"  title="空气净化器QN-608蓝"><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370673968.jpg" alt="空气净化器QN-608蓝" title="空气净化器QN-608蓝" style="width:200px; height:150px;" /></a>
+			   
+		   </li>
+
+           <li class="pager" style="list-style: none;"><a href="product/product5.html"  title="QN-08X活水直饮机"><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370674171.jpg" alt="QN-08X活水直饮机" title="QN-08X活水直饮机" style="width:200px; height:150px;" /></a>
+			   
+		   </li>
+
+           <li class="pager" style="list-style: none;"><a href="product/product9.html"  title="蝶舞飞扬纯水机"><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370674734.jpg" alt="蝶舞飞扬纯水机" title="蝶舞飞扬纯水机" style="width:200px; height:150px;" /></a>
+			   
+		   </li>
+
+           <li class="pager" style="list-style: none;"><a href="product/product8.html"  title="QN-50GF贵夫人（触屏）"><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370673945.jpg" alt="QN-50GF贵夫人（触屏）" title="QN-50GF贵夫人（触屏）" style="width:200px; height:150px;" /></a>
+			   
+		   </li>
+
+           <li class="pager" style="list-style: none;"><a href="product/product4.html"  title="QN-05X孕婴净水机"><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370673795.jpg" alt="QN-05X孕婴净水机" title="QN-05X孕婴净水机" style="width:200px; height:150px;" /></a>
+			   
+		   </li>
+
+           <li class="pager" style="list-style: none;"><a href="product/product3.html"  title="QN-B1壁挂式管线机"><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370674431.jpg" alt="QN-B1壁挂式管线机" title="QN-B1壁挂式管线机" style="width:200px; height:150px;" /></a>
+			   
+		   </li>
+
+           <li class="pager" style="list-style: none;"><a href="product/product2.html"  title="QN-1500C中央净水机"><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370673977.jpg" alt="QN-1500C中央净水机" title="QN-1500C中央净水机" style="width:200px; height:150px;" /></a>
+			   
+		   </li>
+
+           <li class="pager" style="list-style: none;"><a href="product/product1.html"  title="厨饮双子星橙QN-680UFS"><img src="<?php echo $app->baseUrl; ?>/assets/picture/1370673801.jpg" alt="厨饮双子星橙QN-680UFS" title="厨饮双子星橙QN-680UFS" style="width:200px; height:150px;" /></a>
+			   
+		   </li>
+	
+				
+</ol>					</div>
+				</div>
+			</div>
+			
+		</div>
+</div>
+
+<div class="xiabottom"></div>
+<div class="fb">
+<div class="inner">
+<div class="foot-nav"><a href='company/company6.html' 0 title='公司简介'>公司简介</a><span>|</span><a href='company/company7.html'  title='企业历程'>企业历程</a><span>|</span><a href='Merchants/Merchants15.html'  title='加盟条件'>加盟条件</a><span>|</span><a href='feedbaek/' 0 title='在线加盟'>在线加盟</a><span>|</span><a href='Merchants/Merchants17.html'  title='销售网络'>销售网络</a><span>|</span><a href='link/'  title='友情链接'>友情链接</a><span>|</span><a href='Solve/' 0 title='解决方案'>解决方案</a><span>|</span><a href='job/' 0 title='人才招聘'><?php echo $dd; ?></a><span>|</span><a href='company/company8.html' 0 title='联系我们'>联系我们</a></div>
+<div class="foot-text"> <p>净水器设备公司 版权所有 湘ICP备88888888号 <script src="<?php echo $app->baseUrl; ?>/assets/js/stat.php" type="text/javascript"></script><script src="<?php echo $app->baseUrl; ?>/assets/js/metinfo.js"></script>
+</p>
+<p>电话：0731-12345678 12345678  QQ:88888888 999999  Email:ｍo@mpeizhio.cn<div id="metinfo_91mb_Powered"></div></p>
+
+		</div>
+</div>
+
+</div>
+</div>
+</footer>
+<script src="<?php echo $app->baseUrl; ?>/assets/js/fun.inc.js" type="text/javascript"></script>
+<script src="include/stat/stat.php?type=para&u=&d=10001--cn" type="text/javascript"></script>
+
+</body>
+</html>
