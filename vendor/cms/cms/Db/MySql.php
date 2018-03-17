@@ -11,172 +11,213 @@ use \Config;
  * MYSQL数据操方法封装类
  */
 
-class MySql {
 
-	/**
-	 * 查询次数
-	 * @var int
-	 */
-	static private $params;
-	private $queryCount = 0;
+class Mysql {
+    private static $instance;
+    private $dirty;
+    private $active;
+    private static $_pdo;
+    private $sqls;
+    private function __construct($host,$port,$driver,$dbname,$user,$pwd,$prefix)
+    {
+        $this->host = $host;
+        $this->port= $port;
+        $this->driver = $driver;
+        $this->dbname = $dbname;
+        $this->user = $user;
+        $this->pwd = $pwd;
+        $this->prefix = $prefix;
+        $this->dns = "$driver:host=$host;dbname=$dbname";
+        $this->sql= array('query'=>"",'sqls'=>"");
+    }
 
-	/**
-	 * 内部数据连接对象
-	 * @var resourse
-	 */
-	private $conn;
+    public function init()
+    {
+        if(!$this->dirty) {
+            $this->connect();
+        }
+    }
 
-	/**
-	 * 内部数据结果
-	 * @var resourse
-	 */
-	private $result;
+    public static  function getInstance()
+    {
+        if(empty(self::$instance)) {
+            $db = Config::get('db');
 
-	/**
-	 * 内部实例对象
-	 * @var object MySql
-	 */
-	private static $instance = null;
-
-	/**
-	 * 构造函数
-	 */
-	private function __construct($params) {
-		if (!function_exists('mysql_connect')) {
-			emMsg('服务器PHP不支持MySql数据库');
-		}
-		if (!$this->conn = @mysql_connect($params['host'], $params['user'], $params['password'])) {
-            switch ($this->geterrno()) {
-                case 2005:
-                    emMsg("连接数据库失败，数据库地址错误或者数据库服务器不可用");
-                    break;
-                case 2003:
-                    emMsg("连接数据库失败，数据库端口错误");
-                    break;
-                case 2006:
-                    emMsg("连接数据库失败，数据库服务器不可用");
-                    break;
-                case 1045:
-                    emMsg("连接数据库失败，数据库用户名或密码错误");
-                    break;
-                default :
-                    emMsg("连接数据库失败，请检查数据库信息。错误编号：" . $this->geterrno());
-                    break;
+            if(!empty($db)) {
+                self::$instance = new Db($db['host'],$db['port'],$db['driver'],$db['dbname'],$db['user'],$db['pwd'],$db['prefix']);
+                self::$instance->init();
+            }  else {
+                throw new DbException("数据库连接失败",1);
             }
-		}
-		if ($this->getMysqlVersion() > '4.1') {
-			mysql_query("SET NAMES 'utf8'");
-		}
-		@mysql_select_db($params['dbname'], $this->conn) OR emMsg("连接数据库失败，未找到您填写的数据库");
-	}
+        }
+        return self::$instance;
+    }
 
-	/**
-	 * 静态方法，返回数据库连接实例
-	 */
-	public static function getInstance() {
-		if (self::$instance == null) {
-			self::$params = Config::get('db');
-			self::$instance = new MySql(self::$params);
-		}
-		return self::$instance;
-	}
+    public function buildSql()
+    {
+        $keymap = array(
+            'select'=>'select','fields'=>'fileds','from'=>'from','where'=>'where','join'=>'left join','group'=>'group by','having'=>'having','order'=>'order by'
+        );
+        array_walk($keymap,array($this,"__buildSql"),$this->sql);
+        return  $this->sql['sqls'];
+    }
 
-	/**
-	 * 关闭数据库连接
-	 */
-	function close() {
-		return mysql_close($this->conn);
-	}
+    private function __buildWhereSql($where) {
+        $first = array_shift($where);
 
-	/**
-	 * 发送查询语句
-	 */
-	function query($sql) {
-		$preg = self::$params['prefix'].'$1';
-		$sql =preg_replace("/\{\{(.*?)\}\}/",$preg,$sql);
-		$this->result = @mysql_query($sql, $this->conn);
-		$this->queryCount++;
-		if (!$this->result) {
-			emMsg("SQL语句执行错误：$sql <br />" . $this->geterror().' '.$sql);
-		}else {
-			return $this->result;
-		}
-	}
+        $fsql = array_shift($first);
 
-	/**
-	 * 从结果集中取得一行作为关联数组/数字索引数组
-	 *
-	 */
-	function fetch_array($query , $type = MYSQL_ASSOC) {
-		return mysql_fetch_array($query, $type);
-	}
+        foreach($where as $item) {
+            $temp[] = $fsql;
+            $temp[] = $item[0];
+            $fsql = implode(' ' .$item['op'].' ',$temp);
+        }
+        return $fsql;
+    }
 
-	function once_fetch_array($sql) {
-		$this->result = $this->query($sql);
-		return $this->fetch_array($this->result);
-	}
+    private function __buildSql($value,$key,$datas)
+    {
 
-	/**
-	 * 从结果集中取得一行作为数字索引数组
-	 *
-	 */
-	function fetch_row($query) {
-		return mysql_fetch_row($query);
-	}
+        if(isset($this->sql['query'][$key])) {
+            if($key == 'where') {
+                $this->sql['sqls'] .=' '. $value . ' ' . $this->__buildWhereSql($this->sql['query'][$key]);
+            } else {
 
-	/**
-	 * 取得行的数目
-	 *
-	 */
-	function num_rows($query) {
-		return mysql_num_rows($query);
-	}
+                $this->sql['sqls'] .=' '. $value . ' ' . $this->sql['query'][$key];
+            }
+        }
+    }
 
-	/**
-	 * 取得结果集中字段的数目
-	 */
-	function num_fields($query) {
-		return mysql_num_fields($query);
-	}
-	/**
-	 * 取得上一步 INSERT 操作产生的 ID
-	 */
-	function insert_id() {
-		return mysql_insert_id($this->conn);
-	}
 
-	/**
-	 * 获取mysql错误
-	 */
-	function geterror() {
-		return mysql_error();
-	}
+    public function query($sql)
+    {
+        $res = self::$_pdo->query($sql);
+        
+        $result = $res->fetchAll();
+        return $result;
+    }
 
-    /**
-	 * 获取mysql错误编码
-	 */
-	function geterrno() {
-		return mysql_errno();
-	}
+    public static function insert($data,$table)
+    {
+        $db = DB::getInstance();
+        return $db->_insert($data,$table);
+    }
 
-	/**
-	 * Get number of affected rows in previous MySQL operation
-	 */
-	function affected_rows() {
-		return mysql_affected_rows();
-	}
 
-	/**
-	 * 取得数据库版本信息
-	 */
-	function getMysqlVersion() {
-		return mysql_get_server_info();
-	}
+    public  function _insert($data,$table)
+    {
 
-	/**
-	 * 取得数据库查询次数
-	 */
-	function getQueryCount() {
-		return $this->queryCount;
-	}
+        $fileds = array();
+        $sets = array();
+        $pvalues = array();
+        $table = $this->prefix.'_'.$table;
+
+        foreach($data as $columns=>$value) {
+            $fileds[] = $columns;
+            $sets[] = ':'.$columns;
+            $pvalues[$columns] = "'".$value."'";
+        }
+
+        $column = implode(',',$fileds);
+        $set = implode(',',$sets);
+
+        $sql ="INSERT INTO $table($column) VALUES($set)";
+        try {
+            
+            $stmt = self::$_pdo->prepare($sql); 
+            $stmt->execute($pvalues);
+        } catch (PDOException $e) {
+            die ("Error!: " . $e->getMessage() . "<br/>");
+        }
+        return self::$_pdo->lastInsertId();
+    }
+
+
+    public function execute($sql)
+    {
+        $res = self::$_pdo->query($sql);
+        return $res;
+    }
+
+
+    public function connect()
+    {
+        try {
+            self::$_pdo = new PDO($this->dns, $this->user, $this->pwd);
+
+        } catch(PDOException  $e) {
+            throw new DbException("链接错误{$e->getMessage()}",1);
+        }
+    }
+
+    public function close()
+    {
+
+    }
+
+    public static function __callStatic($name, $arguments)
+    {
+        $db = DB::getInstance();
+        //目前只支持table为静态函数
+        switch ($name) {
+            case 'table':
+                $db->sql['query']['from'] = array_shift($arguments);
+                break;
+            case 'query':
+        }
+        return $db;
+        // TODO: Implement __callStatic() method.
+    }
+
+    public function __call($name, $arguments)
+    {
+        switch ($name) {
+            case 'where':
+                $arguments['op'] = 'and';
+                $this->sql['query']['where'][] = $arguments;
+                break;
+            case 'select':
+                $this->sql['query']['fileds'] = $arguments;
+                break;
+            case 'limit':
+                $this->sql['query']['limit'] = $arguments;
+                break;
+            case 'join':
+                $this->sql['query']['join'] =array_shift($arguments);
+                break;
+            case  'order':
+                $this->sql['query']['order'] = array_shift($arguments);
+                break;
+            case 'andwhere':
+                $arguments['op'] = 'and';
+                $this->sql['query']['where'][] = $arguments;
+                break;
+            case 'group':
+                $this->sql['query']['group'] = $arguments;
+                break;
+            case 'params':
+                $this->sql['query']['params'][] = $arguments;
+                break;
+            case 'having':
+                $this->sql['query']['having'] = $arguments;
+                break;
+        }
+        return $this;
+        // TODO: Implement __callStatic() method.
+    }
+
+    public function toSql()
+    {
+        $sql = $this->buildSql();
+        return $sql;
+    }
+    public function get()
+    {
+        $this->sql['query']['select'] = "* ";
+
+        $this->sql['query']['from'] =  $this->prefix.'_'.$this->sql['query']['from'];
+        $sql = $this->buildSql();
+        $result = $this->query($sql);
+        return $result;
+    }
 }
